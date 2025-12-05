@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowley Fish Bar | Best Fish & Chips in Uxbridge</title>
+    <meta name="description" content="Order the best Fish & Chips in Uxbridge. Freshly battered Haddock, Plaice, and Pies. Call 01895 235875 for collection or delivery.">
+
+    <!-- Google Fonts: Oswald (Headings) & Open Sans (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'chippy-red': '#C8102E', // Traditional Red
+                        'chippy-red-dark': '#A00C24',
+                        'chippy-white': '#FFFFFF', 
+                        'chippy-offwhite': '#F3F4F6',
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom tweaks */
+        body {
+            background-color: #F3F4F6;
+            color: #1F2937;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517409187328-c215e9e34360?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .wave-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.735-5.197-2.336-8.144-5.32-4.304-4.36-4.443-12.028-4.443-12.274V2h-8v.406c0 5.48-1.554 10.25-4.416 12.92-2.903 2.706-5.833 4.14-8.625 4.636C56.666 17.51 53.473 17 50 17c-4.99 0-9.61.993-13.623 2.45l-1.353.504c-2.336.85-5.594 1.95-8.91 1.95a15.82 15.82 0 0 1-4.93-.787V20h8v-.002zM100 19.96l-1.748-.686C88.636 15.284 83.272 14 75 14c-11.83 0-16.715 2.158-24.814 5.378l-1.8.715c-5.717 2.273-10.985 3.39-15.633 3.39-4.57 0-8.92-1.07-12.753-2.907V20h8.627zM2.87 20h3.692l1.666-.63c5.368-2.03 10.518-3.37 15.46-3.37 2.115 0 4.195.244 6.223.708l.19.044c5.187 1.22 10.337 1.94 15.42 1.94 4.542 0 8.657-.57 12.308-1.465l.546-.135c3.567-.883 6.946-2.185 10.198-3.826 4.304-2.17 8.358-3.792 12.426-4.76V8.12C78.41 9.47 74.58 11.53 71.04 13.7c-3.14 1.918-6.398 3.486-9.878 4.498l-.48.136c-3.565.998-7.584 1.666-12.182 1.666-4.608 0-8.96-.867-13.06-2.156l-.164-.05C31.574 16.702 27.675 16 23.688 16c-4.653 0-9.608 1.12-14.818 3.09L6.562 20H2.87zM0 12V6c0-4.97 4.03-9 9-9 2.13 0 4.1.72 5.67 1.92C17.06-.57 20.47-2 24-2c3.53 0 6.94 1.43 9.33 3.92C34.9 1.72 36.87 1 39 1c4.97 0 9 4.03 9 9 0 1.65-.45 3.2-1.22 4.53-.45.78-1 1.48-1.63 2.08-1.51 1.45-3.53 2.39-5.75 2.39-1.99 0-3.84-.75-5.25-1.98A8.96 8.96 0 0 1 24 20c-2.48 0-4.73-1.01-6.4-2.64A8.95 8.95 0 0 1 9 20c-4.97 0-9-4.03-9-9z' fill='%23C8102E' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-chippy-red selection:text-white">
+
+    <!-- Sticky Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md border-b-4 border-chippy-red">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <i class="fa-solid fa-fish-fins text-chippy-red text-3xl group-hover:rotate-12 transition transform"></i>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-3xl text-gray-900 leading-none tracking-tight uppercase">Cowley</span>
+                        <span class="text-xs text-chippy-red font-bold uppercase tracking-widest font-sans">Fish Bar</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="font-bold text-gray-800 hover:text-chippy-red transition uppercase text-sm tracking-wider">Home</a>
+                    <a href="#offers" class="font-bold text-gray-800 hover:text-chippy-red transition uppercase text-sm tracking-wider">Deals</a>
+                    <a href="#menu" class="font-bold text-gray-800 hover:text-chippy-red transition uppercase text-sm tracking-wider">Menu</a>
+                    <a href="#location" class="font-bold text-gray-800 hover:text-chippy-red transition uppercase text-sm tracking-wider">Find Us</a>
+                    <a href="tel:01895235875" class="bg-chippy-red text-white px-6 py-2 rounded font-bold uppercase tracking-wider hover:bg-chippy-red-dark transition transform hover:scale-105 shadow-md flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Order Now
+                    </a>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-900 hover:text-chippy-red focus:outline-none">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block py-3 font-bold text-gray-800 hover:text-chippy-red border-b border-gray-100">HOME</a>
+                <a href="#offers" class="block py-3 font-bold text-gray-800 hover:text-chippy-red border-b border-gray-100">DEALS</a>
+                <a href="#menu" class="block py-3 font-bold text-gray-800 hover:text-chippy-red border-b border-gray-100">MENU</a>
+                <a href="#location" class="block py-3 font-bold text-gray-800 hover:text-chippy-red border-b border-gray-100">VISIT US</a>
+                <a href="tel:01895235875" class="block w-full text-center mt-4 bg-chippy-red text-white py-3 rounded font-bold uppercase shadow-lg">
+                    Call 01895 235875
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-[85vh] flex items-center justify-center text-center px-4 pt-16">
+        <div class="max-w-4xl mx-auto animate-fade-in-up">
+            <div class="inline-block bg-chippy-red text-white px-4 py-1 mb-6 text-sm font-bold tracking-widest uppercase rounded shadow-lg">
+                Traditional Fish & Chips
+            </div>
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight uppercase drop-shadow-xl">
+                The Best Fish & Chips <br> in <span class="text-chippy-red bg-white px-2 text-shadow-none">Uxbridge</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-100 mb-10 font-sans font-medium max-w-2xl mx-auto drop-shadow-md">
+                Freshly battered fish, hot chips, delivered to your door.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-5">
+                <a href="tel:01895235875" class="bg-chippy-red text-white px-8 py-4 rounded font-sans font-bold text-xl hover:bg-chippy-red-dark transition shadow-lg border-2 border-chippy-red flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone"></i> 01895 235875
+                </a>
+                <a href="#menu" class="bg-white text-gray-900 px-8 py-4 rounded font-sans font-bold text-xl hover:bg-gray-100 transition border-2 border-white">
+                    View Menu
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Special Offers Banner (Crucial - High Contrast) -->
+    <section id="offers" class="py-16 bg-chippy-red relative overflow-hidden">
+        <!-- Pattern Overlay -->
+        <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/fish-net.png')]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-2 uppercase">Chippy Specials</h2>
+                <div class="w-24 h-1 bg-white mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Deal 1 -->
+                <div class="bg-white p-2 rounded-sm shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                    <div class="border-2 border-dashed border-gray-800 p-6 h-full flex flex-col items-center text-center rounded-sm">
+                        <div class="bg-gray-800 text-white font-bold py-1 px-4 text-xs mb-4 uppercase tracking-widest rounded-full">For The Kids</div>
+                        <h3 class="font-display text-3xl font-bold text-chippy-red mb-2 uppercase">Kiddies Meal Deal</h3>
+                        <p class="text-gray-600 mb-4 font-bold">5 Nuggets, 3 Cod Bites, or Sausage with Chips & Drink</p>
+                        <div class="mt-auto w-full border-t border-gray-200 pt-4 flex justify-between items-center px-4">
+                            <span class="text-4xl font-display font-bold text-gray-900">£3.90</span>
+                            <a href="tel:01895235875" class="text-chippy-red font-bold hover:text-gray-900 transition uppercase text-sm tracking-wider flex items-center gap-2">Order <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal 2 -->
+                <div class="bg-white p-2 rounded-sm shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                    <div class="border-2 border-dashed border-gray-800 p-6 h-full flex flex-col items-center text-center rounded-sm">
+                        <div class="bg-gray-800 text-white font-bold py-1 px-4 text-xs mb-4 uppercase tracking-widest rounded-full">Light Bite</div>
+                        <h3 class="font-display text-3xl font-bold text-chippy-red mb-2 uppercase">Cod Bites Special</h3>
+                        <p class="text-gray-600 mb-4 font-bold">4 Pieces of Fresh Battered Cod</p>
+                        <div class="mt-auto w-full border-t border-gray-200 pt-4 flex justify-between items-center px-4">
+                            <span class="text-4xl font-display font-bold text-gray-900">£4.00</span>
+                            <a href="tel:01895235875" class="text-chippy-red font-bold hover:text-gray-900 transition uppercase text-sm tracking-wider flex items-center gap-2">Order <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section id="menu" class="py-20 bg-chippy-offwhite wave-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 bg-white py-8 shadow-sm border border-gray-200 rounded-sm max-w-4xl mx-auto">
+                <span class="text-chippy-red font-bold uppercase tracking-widest text-sm">Fresh from the Fryer</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4 uppercase">Menu Highlights</h2>
+                <div class="w-16 h-1 bg-chippy-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <!-- Category: Fish -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-lg border border-gray-200 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1579208530389-a161281e4942?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh Fish" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-0 right-0 bg-chippy-red text-white font-bold px-3 py-1 text-xs uppercase">Daily Fresh</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6 border-b-2 border-chippy-red pb-2">
+                            <i class="fa-solid fa-fish text-gray-900 text-2xl"></i>
+                            <h3 class="font-display text-2xl font-bold text-gray-900 uppercase">Fish</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Haddock</span>
+                                <span class="font-bold text-chippy-red">£6.50</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Plaice</span>
+                                <span class="font-bold text-chippy-red">£6.50</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Rock</span>
+                                <span class="font-bold text-chippy-red">£6.50</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Skate</span>
+                                <span class="font-bold text-chippy-red">£7.50</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Scampi</span>
+                                <span class="font-bold text-chippy-red">£6.50</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Category: Pies & Pasties -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-lg border border-gray-200 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1563603417032-60143899f8d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pies" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6 border-b-2 border-chippy-red pb-2">
+                            <i class="fa-solid fa-bread-slice text-gray-900 text-2xl"></i>
+                            <h3 class="font-display text-2xl font-bold text-gray-900 uppercase">Pies & Pasties</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Steak & Kidney</span>
+                                <span class="font-bold text-chippy-red">£3.00</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Chicken & Mushroom</span>
+                                <span class="font-bold text-chippy-red">£3.00</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Beef & Onion</span>
+                                <span class="font-bold text-chippy-red">£3.00</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Cornish Pasty</span>
+                                <span class="font-bold text-chippy-red">£3.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Category: Burgers -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-lg border border-gray-200 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6 border-b-2 border-chippy-red pb-2">
+                            <i class="fa-solid fa-burger text-gray-900 text-2xl"></i>
+                            <h3 class="font-display text-2xl font-bold text-gray-900 uppercase">Burgers</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-start">
+                                <div>
+                                    <span class="block font-bold text-gray-800">Jumbo Burger</span>
+                                    <span class="text-xs text-gray-500">8oz Beef Patty</span>
+                                </div>
+                                <span class="font-bold text-chippy-red">£4.60</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Cheese Burger</span>
+                                <span class="font-bold text-chippy-red">£3.60</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Spicy Chicken Burger</span>
+                                <span class="font-bold text-chippy-red">£3.60</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-gray-800">Vegetarian Burger</span>
+                                <span class="font-bold text-chippy-red">£3.60</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Full Menu CTA -->
+            <div class="text-center mt-12">
+                <button class="bg-gray-900 text-white px-10 py-4 rounded font-bold uppercase tracking-wider hover:bg-chippy-red transition shadow-lg inline-flex items-center">
+                    <i class="fa-solid fa-file-pdf mr-3"></i> Download Full Menu
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Hours -->
+    <section id="location" class="bg-white border-t-4 border-chippy-red">
+        <div class="flex flex-col md:flex-row">
+            
+            <!-- Map Side -->
+            <div class="md:w-1/2 min-h-[400px] relative bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover grayscale opacity-80" alt="Chippy Location">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-white p-8 rounded-lg shadow-2xl text-center border-2 border-chippy-red max-w-xs">
+                        <i class="fa-solid fa-map-pin text-4xl text-chippy-red mb-4"></i>
+                        <p class="font-bold text-gray-900 text-xl font-display uppercase">Cowley</p>
+                        <p class="text-gray-600 font-sans font-bold">Uxbridge, UB8 2HL</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Side -->
+            <div class="md:w-1/2 p-12 md:p-20 flex flex-col justify-center bg-gray-900 text-white">
+                <h2 class="font-display text-4xl font-bold mb-8 text-chippy-red uppercase">Visit Us</h2>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fa-solid fa-location-dot text-chippy-red text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-white font-display uppercase mb-1">Address</h4>
+                            <p class="text-gray-400">28 High St, Cowley<br>Uxbridge, UB8 2HL</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fa-solid fa-clock text-chippy-red text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-white font-display uppercase mb-1">Opening Hours</h4>
+                            <div class="mt-2 text-gray-300 font-sans">
+                                <div class="flex justify-between w-72 border-b border-gray-700 pb-1 mb-2">
+                                    <span>Mon - Thu</span>
+                                    <span class="font-bold text-white">5:00pm – 9:00pm</span>
+                                </div>
+                                <div class="flex justify-between w-72 border-b border-gray-700 pb-1 mb-2">
+                                    <span>Friday</span>
+                                    <span class="font-bold text-white text-right">12-1:30pm & 5-9pm</span>
+                                </div>
+                                <div class="flex justify-between w-72 border-b border-gray-700 pb-1 mb-2">
+                                    <span>Saturday</span>
+                                    <span class="font-bold text-white">5:00pm – 9:00pm</span>
+                                </div>
+                                <div class="flex justify-between w-72 border-b border-gray-700 pb-1">
+                                    <span>Sunday</span>
+                                    <span class="font-bold text-chippy-red">Closed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <a href="tel:01895235875" class="block w-full text-center bg-chippy-red text-white px-8 py-4 rounded font-sans font-bold text-xl hover:bg-white hover:text-chippy-red transition shadow-lg uppercase">
+                        Call 01895 235875
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 border-t border-gray-800 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="#" class="text-gray-500 hover:text-chippy-red transition text-xl"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-gray-500 hover:text-chippy-red transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="text-gray-600 text-sm uppercase tracking-wider">© 2023 Cowley Fish Bar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>
